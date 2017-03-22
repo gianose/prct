@@ -1,0 +1,30 @@
+Capture stack trace
+
+# declare -a A
+#
+# x(){
+#   y
+# }
+#
+# y(){
+#   z
+# }
+#
+# z(){
+#   w
+# }
+#
+# w(){
+#   local frame=0
+#   while A+=("$(caller ${frame})"); do
+#     ((frame++))
+#   done
+# }
+#
+# x
+#
+# echo "${A[@]}"
+
+The most efficient way to zero out a file:
+
+# truncate -s 0 filename
