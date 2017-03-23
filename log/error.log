@@ -1,5 +1,0 @@
-2017-03-22 17:17:41 ./test_logger.sh:46:tst_log_cor: InvalidArgument: 59337b853979ec77d775f11a 
-           46 tst_log_cor ./test_logger.sh 
-           33 tst_log_main ./test_logger.sh 
-           54 main ./test_logger.sh 
-           

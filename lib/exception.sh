@@ -16,6 +16,7 @@ declare -a INV_ARG=(
 
 declare -A EXCEPTION=(
 	[InvalidArgument]="255"
+	[UnexpectedFormat]="254"
 )
 
 declare -a stack
