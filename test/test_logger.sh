@@ -28,9 +28,8 @@ declare -a TST_LOG_COR=(
 
 tst_log_main() {
 	printf "%s\n" "${TST_LOG_TTL}"
-	#tst_log_err
-	printf "%9s\n" "CORRECT"
-	tst_log_cor
+	tst_log_neg;
+	tst_log_pos
 }
 
 tst_log_neg() {
@@ -38,29 +37,21 @@ tst_log_neg() {
 	runMultiInput TST_LOG_ERR[@]
 }
 
-
-x() {
-	declare -a params
-	declare -a tests=("${!1}")
-	for tsk in "${tests[@]}"; do
-		IFS=',' read -r -a params <<< ${tsk}
-		echo ${params[0]}
-		echo ${params[1]}
-		echo "$(tst_log_pos params[@])"
-		wait
-		assertEquals "${params[0]}" ${params[1]} ${_v}
-	done
+tst_log_pos() {
+	printf "%9s\n" "CORRECT"
+	runCustom TST_LOG_COR[@] tst_log_fmt_chk	
 }
 
-tst_log_pos() {
-	
+tst_log_fmt_chk() {
 	declare -a e_log
 	declare -a params=("${!1}")
 	declare -a tst_log_err=(
 		"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} ${BASH_SOURCE[0]}:\d{2}:${FUNCNAME[0]}: InvalidArgument: ${TST_LOG_RND}$"
 		"^\d{2} ${FUNCNAME[0]} ${BASH_SOURCE[0]}$"
-		"^\d{2} ${FUNCNAME[1]} ${BASH_SOURCE[0]}$"
-		"^\d{2} ${FUNCNAME[3]} ${BASH_SOURCE[0]}$"
+		"^\d{2} ${FUNCNAME[1]} ${BASH_SOURCE[1]}$"
+		"^\d{2} ${FUNCNAME[2]} ${BASH_SOURCE[2]}$"
+		"^\d{2} ${FUNCNAME[3]} ${BASH_SOURCE[3]}$"
+		"^\d{2} ${FUNCNAME[4]} ${BASH_SOURCE[4]}$"
 	)
 	declare -a tst_log_evnt=(
 		"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} ${BASH_SOURCE[0]}:\d{2}:${FUNCNAME[0]}: ${TST_LOG_RND}$"	
@@ -70,28 +61,26 @@ tst_log_pos() {
 	local _l=${_f#*_}; _l=${_l^^}
 	local regex=''
 	
-	if [ ${_l} == "ERROR" ]; then
+	if [[ ${_l} == "ERROR" ]]; then
 		$_f "$(incite "InvalidArgument" "${TST_LOG_RND}" 1)"
 		regex=("${tst_log_err[@]}")
 	else
 		$_f "${TST_LOG_RND}"
-		regex=("${tst_log_evnt}")
+		regex=("${tst_log_evnt[@]}")
 	fi
 
 	IFS='|' read -r -a e_log <<< $(echo "$(cat ${!_l})" | tr -s '\n' '|')
-	
 	( 
 		for i in "${!e_log[@]}"; do
-			$( echo ${e_log[${i}]} | sed -e 's/[ \t]*$//g' | grep -P -q "${regex[${i}]}" ) || throw "UnexpectedFormat" "The log was formated incorrectly see log/${_l}"	
+			$( echo ${e_log[${i}]} | sed -e 's/[ \t]*$//g' | grep -P -q "${regex[${i}]}" ) || throw "UnexpectedFormat" "The log was formated incorrectly see log/${_l}" &> /dev/null	
 		done
 
 		exit 0
 	)
 	
-    echo ${?}
+   echo ${?}
 
 	wait
 }
 
-#tst_log_main
-x TST_LOG_COR[@] 
+tst_log_main

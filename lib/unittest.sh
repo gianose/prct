@@ -37,6 +37,15 @@ runMultiInput() {
 	done
 }
 
+runCustom() {
+	declare -a params
+	declare -a tests=("${!1}")
+	for tsk in "${tests[@]}"; do
+		IFS=',' read -r -a params <<< ${tsk}
+		assertEquals "${params[0]}" ${params[1]} $($2 params[@])
+	done
+}
+
 assertEquals() {
 	local msg=$1
 	local exp=$2
