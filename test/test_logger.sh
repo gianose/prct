@@ -20,28 +20,34 @@ declare -a TST_LOG_ERR=(
 	"logger::log_error - Zero param,255,"
 	"logger::log_error - More than one param,255,$(incite "InvalidArgument" "This is a test" 1),blah"
 )
+ 
 declare -a TST_LOG_COR=(
 	"logger::log_event - Logging an event,0,This is a test event log entry"
 	"logger::log_error - Logging an error,0,This is a test error log entry"
 )
 
-
+# Executes the functions that test the negative and positive outcomes of the test logger unit test.
 tst_log_main() {
 	printf "%s\n" "${TST_LOG_TTL}"
 	tst_log_neg;
 	tst_log_pos
 }
 
+# Test all conceived possible scenarios which would cause logger.sh to react negatively.
 tst_log_neg() {
 	printf "%8s\n" "ERRORS"
 	runMultiInput TST_LOG_ERR[@]
 }
 
+# Test all conceived possible scenarios which would cause logger.sh to react positively.
 tst_log_pos() {
 	printf "%9s\n" "CORRECT"
 	runCustom TST_LOG_COR[@] tst_log_fmt_chk	
 }
 
+# Function utilized in order to verify that the logs produced by the logger script are in
+# the desired format.
+# @arg:<array> - ...
 tst_log_fmt_chk() {
 	declare -a e_log
 	declare -a params=("${!1}")

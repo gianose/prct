@@ -6,6 +6,8 @@
 
 declare UNT_TST_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Run the provided function with a single input.
+# @arg:<array> - An array of comma dilimited strings.
 runSingleInput() {
 	declare -a params
 	declare -a tests=("${!1}")
@@ -17,6 +19,8 @@ runSingleInput() {
 	done
 }
 
+# Run the provided function with multiple arguments, up to three.
+# @arg:<array> - An array of comma dilimited strings.
 runMultiInput() {
 	declare -a params
 	declare -a tests=("${!1}")
@@ -37,6 +41,8 @@ runMultiInput() {
 	done
 }
 
+# Run the provided function against the provided test funtion.
+# @arg:<array> - An array of comma dilimited strings.
 runCustom() {
 	declare -a params
 	declare -a tests=("${!1}")
@@ -46,6 +52,13 @@ runCustom() {
 	done
 }
 
+# Determines if the expected out come matches the actual out come. 
+# If the expected out come matches the expected then the function
+# outputs the provided message and "passed". If they do not match, 
+# the function then outputs the provided message and "failed"
+# @arg:<string> - The desired message.
+# @arg:<integer> - The expected outcome.
+# @arg:<integer> - the actual outcome. 
 assertEquals() {
 	local msg=$1
 	local exp=$2
@@ -59,7 +72,9 @@ assertEquals() {
 	fi
 }
 
-
+# Formats and outputs the provided strings
+# @arg:<string> - The message
+# @arg:<string> - Test result
 output() {
 	local out=""
 	local form="%s\n"
