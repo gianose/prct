@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+f() {
+	declare var='yes'
 
-source ${DIR}'/../lib/logger.sh'
-v(){
-	w
-}
-w(){
-	x
+	f1() {
+		echo "Inner function ${var}"
+	}
 }
 
-x(){
-	y
-}
+f1
 
-y(){
-	z
-}
+f
 
-z(){
-	_l=${#FUNCNAME[@]}
-	echo ${FUNCNAME[1]}
-}
+echo ${var}
 
-v
+f1

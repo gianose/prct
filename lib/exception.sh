@@ -15,8 +15,11 @@ declare -a INV_ARG=(
 )
 
 declare -A EXCEPTION=(
-	[InvalidArgument]="255"
-	[UnexpectedFormat]="254"
+	[InvalidArgument]="113"
+	[UnexpectedFormat]="112"
+	[IOError]="111"
+	[InitalizationError]="110"
+	[DatabaseException]="109"
 )
 
 declare -a stack

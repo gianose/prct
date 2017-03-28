@@ -15,10 +15,10 @@ source ${TST_LOG_DIR}'/../lib/constants.sh'
 declare TST_LOG_TTL='Testing `lib/logger.sh`'
 declare TST_LOG_RND="$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 24)"
 declare -a TST_LOG_ERR=(
-	"logger::log_event - Zero param,255,"
-	"logger::log_event - More than one param,255,This is a test event,blah"
-	"logger::log_error - Zero param,255,"
-	"logger::log_error - More than one param,255,$(incite "InvalidArgument" "This is a test" 1),blah"
+	"logger::log_event - Zero param,113,"
+	"logger::log_event - More than one param,113,This is a test event,blah"
+	"logger::log_error - Zero param,113,"
+	"logger::log_error - More than one param,113,$(incite "InvalidArgument" "This is a test" 1),blah"
 )
  
 declare -a TST_LOG_COR=(

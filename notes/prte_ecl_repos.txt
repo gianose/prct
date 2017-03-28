@@ -1,0 +1,755 @@
+/data/hpcc/bocaprod/master/prte2_dnb:
+total 56
+-rw-r--r-- 1 dataops dataops   548 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  3823 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops 12856 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   132 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  2268 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  6603 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   276 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   345 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  2737 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops   289 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/prte2_busreg:
+total 120
+-rw-r--r-- 1 dataops dataops   377 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops 28343 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops   109 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  2081 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops   259 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   289 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  1772 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 37629 Mar 23 01:20 as_header.ecl
+-rw-r--r-- 1 dataops dataops  1151 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops 23431 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/prte2_VotersV2:
+total 52
+-rw-r--r-- 1 dataops dataops  280 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  258 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  359 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 4435 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  117 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 1895 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  387 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1154 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops 1862 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 8847 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/prte2_DLV2:
+total 56
+-rw-r--r-- 1 dataops dataops 8416 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 2002 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 2919 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  359 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 8396 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  132 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops 1920 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 3798 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  273 Mar 23 01:20 Proc_Build_All.ecl
+-rw-r--r-- 1 dataops dataops  270 Mar 23 01:20 proc_build_base.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_WaterCraft:
+total 256
+-rw-r--r-- 1 dataops dataops  8621 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops   153 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 18152 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  3139 Mar 23 01:20 fspray_And_Build_Base.ecl
+-rw-r--r-- 1 dataops dataops   874 Mar 23 01:20 key_watercraft_bdid.ecl
+-rw-r--r-- 1 dataops dataops   435 Mar 23 01:20 key_watercraft_cid.ecl
+-rw-r--r-- 1 dataops dataops   631 Mar 23 01:20 key_watercraft_did.ecl
+-rw-r--r-- 1 dataops dataops  1835 Mar 23 01:20 key_watercraft_hullnum.ecl
+-rw-r--r-- 1 dataops dataops  1374 Mar 23 01:20 key_watercraft_offnum.ecl
+-rw-r--r-- 1 dataops dataops   486 Mar 23 01:20 key_watercraft_sid.ecl
+-rw-r--r-- 1 dataops dataops  1750 Mar 23 01:20 key_watercraft_vslnam.ecl
+-rw-r--r-- 1 dataops dataops   422 Mar 23 01:20 key_watercraft_wid.ecl
+-rw-r--r-- 1 dataops dataops  1428 Mar 23 01:20 after_build_actions.ecl
+-rw-r--r-- 1 dataops dataops 27006 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  4134 Mar 23 01:20 fSpray_And_Append_New.ecl
+-rw-r--r-- 1 dataops dataops   135 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 25425 Mar 23 01:20 _Layouts.ecl
+-rw-r--r-- 1 dataops dataops   936 Mar 23 01:20 _Macros.ecl
+-rw-r--r-- 1 dataops dataops   191 Mar 23 01:20 _Common.ecl
+-rw-r--r-- 1 dataops dataops   797 Mar 23 01:20 _Constants.ecl
+-rw-r--r-- 1 dataops dataops  2795 Mar 23 01:20 _Datasets.ecl
+-rw-r--r-- 1 dataops dataops  4339 Mar 23 01:20 _Files.ecl
+-rw-r--r-- 1 dataops dataops  1244 Mar 23 01:20 _LandingZoneConfig.ecl
+-rw-r--r-- 1 dataops dataops 10180 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  3819 Mar 23 01:20 Proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops  8167 Mar 23 01:20 Proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  1335 Mar 23 01:20 Build_File_CoastGuard.ecl
+-rw-r--r-- 1 dataops dataops  1335 Mar 23 01:20 Build_File_Main.ecl
+-rw-r--r-- 1 dataops dataops  1308 Mar 23 01:20 Build_File_Search.ecl
+-rw-r--r-- 1 dataops dataops  1971 Mar 23 01:20 Build_Keys_All.ecl
+-rw-r--r-- 1 dataops dataops  4027 Mar 23 01:20 Build_Keys_AutoKeys.ecl
+-rw-r--r-- 1 dataops dataops  2066 Mar 23 01:20 Build_Master.ecl
+-rw-r--r-- 1 dataops dataops  1162 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  1685 Mar 23 01:20 Create_AutoKeys_SuperFiles.ecl
+-rw-r--r-- 1 dataops dataops  2301 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   673 Mar 23 01:20 BWR_Build_Master_AddNew.ecl
+-rw-r--r-- 1 dataops dataops   745 Mar 23 01:20 BWR_BuildMaster_Rebuild.ecl
+-rw-r--r-- 1 dataops dataops  3420 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  1235 Mar 23 01:20 BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops  5789 Mar 23 01:20 BWR_ReverseEngineer_and_validate_existing_Data.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_X_DataCleanse:
+total 12
+-rw-r--r-- 1 dataops dataops 836 Mar 23 01:20 zz_Files_Alpha.ecl
+-rw-r--r-- 1 dataops dataops 752 Mar 23 01:20 zz_Layouts_Alpha.ecl
+-rw-r--r-- 1 dataops dataops 556 Mar 23 01:20 zz_Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Watchdog:
+total 24
+-rw-r--r-- 1 dataops dataops    84 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops   202 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  1610 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 11834 Mar 23 01:20 proc_build_keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Vehicle:
+total 100
+-rw-r--r-- 1 dataops dataops  4483 Mar 23 01:20 create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  3253 Mar 23 01:20 file_bocashell_vehicles.ecl
+-rw-r--r-- 1 dataops dataops  5001 Mar 23 01:20 file_SearchAutokey_Party.ecl
+-rw-r--r-- 1 dataops dataops  3214 Mar 23 01:20 fn_AgePerPlateAddr.ecl
+-rw-r--r-- 1 dataops dataops  5851 Mar 23 01:20 fn_PopulateVinaInfo.ecl
+-rw-r--r-- 1 dataops dataops   255 Mar 23 01:20 fnSpray.ecl
+-rw-r--r-- 1 dataops dataops   200 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   881 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 11612 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  4885 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  1278 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  4519 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  9923 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  9951 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_UCC:
+total 52
+-rw-r--r-- 1 dataops dataops  309 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 5786 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 6751 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1727 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 2964 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  774 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2170 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 5758 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  684 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_SexOffender:
+total 68
+-rw-r--r-- 1 dataops dataops  143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 6479 Mar 23 01:20 proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops 5104 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 5097 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1429 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 3458 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  992 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 7919 Mar 23 01:20 file_ENH_key.ecl
+-rw-r--r-- 1 dataops dataops 3091 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  253 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 6578 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 2909 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_RiskTable:
+total 76
+-rw-r--r-- 1 dataops dataops  8565 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  5217 Mar 23 01:20 ADL_Risk_Table_v4.ecl
+-rw-r--r-- 1 dataops dataops  3330 Mar 23 01:20 ADL_Segmentation.ecl
+-rw-r--r-- 1 dataops dataops  1264 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   157 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 15494 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  2097 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  7940 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   162 Mar 23 01:20 Proc_Build_All.ecl
+-rw-r--r-- 1 dataops dataops 11030 Mar 23 01:20 SSN_Table.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_PropertyInfo:
+total 136
+-rw-r--r-- 1 dataops dataops   818 Mar 23 01:20 key_PropertyInfo_address.ecl
+-rw-r--r-- 1 dataops dataops  2261 Mar 23 01:20 key_PropertyInfo_rid.ecl
+-rw-r--r-- 1 dataops dataops   293 Mar 23 01:20 Transforms.ecl
+-rw-r--r-- 1 dataops dataops   909 Mar 23 01:20 ZZ_BWR_PropertyInfo.ecl
+-rw-r--r-- 1 dataops dataops  1201 Mar 23 01:20 ZZ_BWR_Spray_Scrambled_PII.ecl
+-rw-r--r-- 1 dataops dataops  2444 Mar 23 01:20 ZZ_Fn_Spray_Scrambled_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops 29324 Mar 23 01:20 ZZ_Transform_Data.ecl
+-rw-r--r-- 1 dataops dataops  1000 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  5988 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  2361 Mar 23 01:20 Fn_Spray_Alpharetta_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  2334 Mar 23 01:20 Fn_Spray_Boca_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  9686 Mar 23 01:20 Get_Payload.ecl
+-rw-r--r-- 1 dataops dataops 11309 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  1033 Mar 23 01:20 NEW_process_build_propertyinfo.ecl
+-rw-r--r-- 1 dataops dataops  3559 Mar 23 01:20 Transform_Alpha_Data.ecl
+-rw-r--r-- 1 dataops dataops  1112 Mar 23 01:20 After_Build_Actions.ecl
+-rw-r--r-- 1 dataops dataops  1501 Mar 23 01:20 BWR_Build_PropertyInfo.ecl
+-rw-r--r-- 1 dataops dataops  1825 Mar 23 01:20 BWR_Despray_Alpharetta_Base.ecl
+-rw-r--r-- 1 dataops dataops  1265 Mar 23 01:20 BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops   879 Mar 23 01:20 BWR_Despray_Boca_Base.ecl
+-rw-r--r-- 1 dataops dataops   898 Mar 23 01:20 BWR_Spray_Alpharetta_Base.ecl
+-rw-r--r-- 1 dataops dataops   860 Mar 23 01:20 BWR_Spray_Boca_Base.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Prof_License_Mari:
+total 76
+-rw-r--r-- 1 dataops dataops  5485 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  5756 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 12175 Mar 23 01:20 as_header.ecl
+-rw-r--r-- 1 dataops dataops  5634 Mar 23 01:20 fCleanNameAddr.ecl
+-rw-r--r-- 1 dataops dataops  2185 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops   472 Mar 23 01:20 fn_Spray_Files.ecl
+-rw-r--r-- 1 dataops dataops 12922 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops   664 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops   138 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  3128 Mar 23 01:20 BWR_Create_Superfiiles.ecl
+-rw-r--r-- 1 dataops dataops  1123 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Prof_LicenseV2:
+total 68
+-rw-r--r-- 1 dataops dataops  4489 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   492 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops  2271 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops   143 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  3089 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops   372 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   309 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  7517 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 17195 Mar 23 01:20 as_header.ecl
+-rw-r--r-- 1 dataops dataops  4798 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Phonesplus_Ins:
+total 32
+-rw-r--r-- 1 dataops dataops 1000 Mar 23 01:20 BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops  949 Mar 23 01:20 BWR_Spray_Base.ecl
+-rw-r--r-- 1 dataops dataops  815 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2631 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 4737 Mar 23 01:20 Fn_Spray_And_Build_BaseMain.ecl
+-rw-r--r-- 1 dataops dataops  384 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  990 Mar 23 01:20 BWR_Build_PhonesPlus.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Phonesplus:
+total 72
+-rw-r--r-- 1 dataops dataops 5036 Mar 23 01:20 Fn_Spray_And_Build_BaseMain.ecl
+-rw-r--r-- 1 dataops dataops  336 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 3195 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  729 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  216 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 4874 Mar 23 01:20 proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops 1137 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 8704 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  616 Mar 23 01:20 BWR_Build_PhonesPlus.ecl
+-rw-r--r-- 1 dataops dataops 2793 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops 1344 Mar 23 01:20 BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops 1465 Mar 23 01:20 BWR_Spray_Base.ecl
+-rw-r--r-- 1 dataops dataops 1155 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2119 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops    0 Feb 24 17:30 as_headers.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_PAW:
+total 44
+-rw-r--r-- 1 dataops dataops 1571 Mar 23 01:20 file_SearchAutokey.ecl
+-rw-r--r-- 1 dataops dataops 4814 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 2485 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops 4060 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  106 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 2158 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 2693 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  267 Mar 23 01:20 Proc_Build_All.ecl
+-rw-r--r-- 1 dataops dataops  666 Mar 23 01:20 Proc_Build_Base.ecl
+-rw-r--r-- 1 dataops dataops  346 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Neighborhood:
+total 40
+-rw-r--r-- 1 dataops dataops 4172 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  179 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 7919 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  883 Mar 23 01:20 proc_CopyFiles.ecl
+-rw-r--r-- 1 dataops dataops 1514 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  316 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1506 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 2867 Mar 23 01:20 Keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Marriage_Divorce:
+total 52
+-rw-r--r-- 1 dataops dataops  5292 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  1921 Mar 23 01:20 as_header.ecl
+-rw-r--r-- 1 dataops dataops  2799 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops   807 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  2559 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   136 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  3210 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  3568 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 11480 Mar 23 01:20 proc_build_base.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Liens_Ins:
+total 52
+-rw-r--r-- 1 dataops dataops 1695 Mar 23 01:20 BWR_Despray_All.ecl
+-rw-r--r-- 1 dataops dataops  962 Mar 23 01:20 BWR_Spray_Both_Files.ecl
+-rw-r--r-- 1 dataops dataops  670 Mar 23 01:20 BWR_Spray_Main.ecl
+-rw-r--r-- 1 dataops dataops  673 Mar 23 01:20 BWR_Spray_Party.ecl
+-rw-r--r-- 1 dataops dataops  815 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 4530 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 4557 Mar 23 01:20 fSprays.ecl
+-rw-r--r-- 1 dataops dataops 1761 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops 8408 Mar 23 01:20 proc_build_base.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Liens:
+total 124
+-rw-r--r-- 1 dataops dataops  2423 Mar 23 01:20 key_liens_main_ID.ecl
+-rw-r--r-- 1 dataops dataops   398 Mar 23 01:20 key_liens_party_ID.ecl
+-rw-r--r-- 1 dataops dataops   323 Mar 23 01:20 key_liens_party_ID_linkids.ecl
+-rw-r--r-- 1 dataops dataops   302 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  8427 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 13014 Mar 23 01:20 proc_build_liens_keys.ecl
+-rw-r--r-- 1 dataops dataops  3914 Mar 23 01:20 proc_spray_liensV2.ecl
+-rw-r--r-- 1 dataops dataops  2670 Mar 23 01:20 file_SearchAutokey.ecl
+-rw-r--r-- 1 dataops dataops  1674 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops   394 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops   777 Mar 23 01:20 key_liens_BDID.ecl
+-rw-r--r-- 1 dataops dataops  1227 Mar 23 01:20 key_liens_case_number.ecl
+-rw-r--r-- 1 dataops dataops   955 Mar 23 01:20 key_liens_certificate_number.ecl
+-rw-r--r-- 1 dataops dataops   749 Mar 23 01:20 key_liens_DID.ecl
+-rw-r--r-- 1 dataops dataops  1167 Mar 23 01:20 key_liens_filing.ecl
+-rw-r--r-- 1 dataops dataops   930 Mar 23 01:20 key_liens_irs_serial_number.ecl
+-rw-r--r-- 1 dataops dataops   531 Mar 23 01:20 key_liens_RMSID.ecl
+-rw-r--r-- 1 dataops dataops   280 Mar 23 01:20 key_liens_SourceRecID.ecl
+-rw-r--r-- 1 dataops dataops  2426 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  5900 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops   780 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  2170 Mar 23 01:20 Key_party_LinkIds.ecl
+-rw-r--r-- 1 dataops dataops  2687 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  1120 Mar 23 01:20 Proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops  1148 Mar 23 01:20 Proc_build_autokeys_fcra.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_LNProperty:
+total 328
+-rw-r--r-- 1 dataops dataops  1364 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 28086 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 17279 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  5444 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   336 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 18074 Mar 23 01:20 mod_ownership.ecl
+-rw-r--r-- 1 dataops dataops  2030 Mar 23 01:20 post_processing_actions.ecl
+-rw-r--r-- 1 dataops dataops 12066 Mar 23 01:20 Transform_Data.ecl
+-rw-r--r-- 1 dataops dataops  3065 Mar 23 01:20 Transforms.ecl
+-rw-r--r-- 1 dataops dataops  8079 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 26831 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops 11780 Mar 23 01:20 Layouts_V2.ecl
+-rw-r--r-- 1 dataops dataops  4273 Mar 23 01:20 NEW_Proc_Build_LNPropertyV2_keys.ecl
+-rw-r--r-- 1 dataops dataops  6571 Mar 23 01:20 Ownership_File.ecl
+-rw-r--r-- 1 dataops dataops   289 Mar 23 01:20 Proc_Build_All.ecl
+-rw-r--r-- 1 dataops dataops 15827 Mar 23 01:20 File_Prop_Ownership_V4.ecl
+-rw-r--r-- 1 dataops dataops 21464 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  2487 Mar 23 01:20 Fn_Spray_Alpha_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  2334 Mar 23 01:20 Fn_Spray_Boca_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  3335 Mar 23 01:20 Get_payload.ecl
+-rw-r--r-- 1 dataops dataops 23450 Mar 23 01:20 Key_Layouts_V2.ecl
+-rw-r--r-- 1 dataops dataops  3241 Mar 23 01:20 As_Business_source.ecl
+-rw-r--r-- 1 dataops dataops  1982 Mar 23 01:20 BWR_Build_LNPropertyV2.ecl
+-rw-r--r-- 1 dataops dataops  1521 Mar 23 01:20 BWR_Despray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops  1247 Mar 23 01:20 BWR_Despray_Boca_Base.ecl
+-rw-r--r-- 1 dataops dataops   830 Mar 23 01:20 BWR_Spray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops   855 Mar 23 01:20 BWR_Spray_Boca_Base.ecl
+-rw-r--r-- 1 dataops dataops   566 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 13137 Mar 23 01:20 File_Prop_Address_Prep_v4.ecl
+-rw-r--r-- 1 dataops dataops 16648 Mar 23 01:20 File_Prop_Ownership_FCRA_V4.ecl
+-rw-r--r-- 1 dataops dataops  7073 Mar 23 01:20 As_Business_Link_Prep.ecl
+-rw-r--r-- 1 dataops dataops  6522 Mar 23 01:20 As_Business_Prep.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Infutor:
+total 28
+-rw-r--r-- 1 dataops dataops  827 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  321 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1619 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  794 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 1219 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  201 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 2830 Mar 23 01:20 proc_build_keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_IRS:
+total 40
+-rw-r--r-- 1 dataops dataops  100 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  140 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 2787 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 1332 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1436 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 6617 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  259 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  340 Mar 23 01:20 BWR_Create_Superfiles.ecl
+-rw-r--r-- 1 dataops dataops  235 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Header_Ins:
+total 36
+-rw-r--r-- 1 dataops dataops 2878 Mar 23 01:20 _Developer_Notes.ecl
+-rw-r--r-- 1 dataops dataops 4257 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 1572 Mar 23 01:20 fn_generate_relation_base.ecl
+-rw-r--r-- 1 dataops dataops 2780 Mar 23 01:20 fn_Spray_Alpharetta_Base.ecl
+-rw-r--r-- 1 dataops dataops  513 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  782 Mar 23 01:20 BWR_Despray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops  778 Mar 23 01:20 BWR_Spray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops  401 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Header:
+total 116
+-rw-r--r-- 1 dataops dataops   795 Mar 23 01:20 zz_BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops   781 Mar 23 01:20 zz_BWR_Spray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops   401 Mar 23 01:20 zz_Constants.ecl
+-rw-r--r-- 1 dataops dataops  4247 Mar 23 01:20 zz_Files.ecl
+-rw-r--r-- 1 dataops dataops  1572 Mar 23 01:20 zz_fn_generate_relation_base.ecl
+-rw-r--r-- 1 dataops dataops  2780 Mar 23 01:20 zz_fn_Spray_Alpharetta_Base.ecl
+-rw-r--r-- 1 dataops dataops   513 Mar 23 01:20 zz_Layouts.ecl
+-rw-r--r-- 1 dataops dataops  1090 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops  8669 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops  1927 Mar 23 01:20 fn_bld_blank_index.ecl
+-rw-r--r-- 1 dataops dataops  1954 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops   588 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  1216 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 48427 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  1136 Mar 23 01:20 Proc_build_update_dops.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_GlobalWatchLists:
+total 48
+-rw-r--r-- 1 dataops dataops  2424 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   720 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  3904 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   153 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  3111 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  2216 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   161 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   277 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 13141 Mar 23 01:20 proc_build_keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_GSA:
+total 44
+-rw-r--r-- 1 dataops dataops 4263 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 2222 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  112 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  260 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 2136 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  292 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  578 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 1589 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 7480 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Foreclosure:
+total 208
+-rw-r--r-- 1 dataops dataops  4139 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops   188 Mar 23 01:20 fn_Spray_Files.ecl
+-rw-r--r-- 1 dataops dataops  1498 Mar 23 01:20 post_processing_actions.ecl
+-rw-r--r-- 1 dataops dataops   137 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 24306 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  6828 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops   981 Mar 23 01:20 ZZ_BWR_Spray_Scrambled_Foreclosures.ecl
+-rw-r--r-- 1 dataops dataops  2418 Mar 23 01:20 ZZ_Fn_Spray_Scrambled_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops 38950 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  5864 Mar 23 01:20 NEW_Proc_Build_Autokeys_bid.ecl
+-rw-r--r-- 1 dataops dataops  3849 Mar 23 01:20 NEW_Proc_Build_Autokeys.ecl
+-rw-r--r-- 1 dataops dataops  3719 Mar 23 01:20 Proc_build_foreclosure_keys.ecl
+-rw-r--r-- 1 dataops dataops  8019 Mar 23 01:20 Transform_Data.ecl
+-rw-r--r-- 1 dataops dataops   291 Mar 23 01:20 Transforms.ecl
+-rw-r--r-- 1 dataops dataops  1413 Mar 23 01:20 ZZ_BWR_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops  6572 Mar 23 01:20 CreateEmptyForeclosureKeys.ecl
+-rw-r--r-- 1 dataops dataops  1130 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  2677 Mar 23 01:20 Fn_Spray_ALPHA_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  2341 Mar 23 01:20 Fn_Spray_Boca_Spreadsheet.ecl
+-rw-r--r-- 1 dataops dataops  4439 Mar 23 01:20 Get_payload.ecl
+-rw-r--r-- 1 dataops dataops  3007 Mar 23 01:20 Join_Files.ecl
+-rw-r--r-- 1 dataops dataops 11071 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops   794 Mar 23 01:20 AK_Constants.ecl
+-rw-r--r-- 1 dataops dataops  1956 Mar 23 01:20 BWR_Build_Foreclosure.ecl
+-rw-r--r-- 1 dataops dataops  3942 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops   854 Mar 23 01:20 BWR_Despray_Alpha_Base.ecl
+-rw-r--r-- 1 dataops dataops   604 Mar 23 01:20 BWR_Despray_Boca_Base.ecl
+-rw-r--r-- 1 dataops dataops   921 Mar 23 01:20 BWR_Spray_Alpha_Foreclosures.ecl
+-rw-r--r-- 1 dataops dataops   891 Mar 23 01:20 BWR_Spray_Boca_Base.ecl
+-rw-r--r-- 1 dataops dataops  1596 Mar 23 01:20 Constants.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_FCC:
+total 40
+-rw-r--r-- 1 dataops dataops 3354 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  146 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 6431 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  117 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  709 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2491 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 1789 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 1924 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops 1849 Mar 23 01:20 BWR_create_superfiles.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_FBN:
+total 52
+-rw-r--r-- 1 dataops dataops 5395 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 4145 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  271 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops  163 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  517 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 2566 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops 2797 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops 1066 Mar 23 01:20 Proc_Build_Autokeys.ecl
+-rw-r--r-- 1 dataops dataops  469 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1931 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 1824 Mar 23 01:20 Keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_FAA:
+total 68
+-rw-r--r-- 1 dataops dataops 8634 Mar 23 01:20 as_header_aircraft.ecl
+-rw-r--r-- 1 dataops dataops 1652 Mar 23 01:20 as_header_airmen.ecl
+-rw-r--r-- 1 dataops dataops  309 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 8111 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops 1731 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops  137 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 5430 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 9334 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 4018 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops 1583 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2766 Mar 23 01:20 Files.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Experian_CRDB:
+total 44
+-rw-r--r-- 1 dataops dataops  240 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 1123 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  136 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 4836 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  270 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  299 Mar 23 01:20 Proc_Build_Base.ecl
+-rw-r--r-- 1 dataops dataops  803 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  235 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  402 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  569 Mar 23 01:20 Keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_EmergesKeys:
+total 56
+-rw-r--r-- 1 dataops dataops 1698 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 2834 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops  248 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  229 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 6919 Mar 23 01:20 proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops  487 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 8167 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1137 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 2513 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 3124 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 6611 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Email_Obsolete:
+total 176
+-rw-r--r-- 1 dataops dataops 3198 Mar 23 01:20 z__BWR_FN_Build_Email_ORIG_TMP.ecl
+-rw-r--r-- 1 dataops dataops 1419 Mar 23 01:20 z_p1_build_autokey_ORIG.ecl
+-rw-r--r-- 1 dataops dataops 6577 Mar 23 01:20 z_p1_build_base_ORIG.ecl
+-rw-r--r-- 1 dataops dataops  843 Mar 23 01:20 z_p1_proc_build_all_ORIG.ecl
+-rw-r--r-- 1 dataops dataops 5402 Mar 23 01:20 z_p1_procs_ORIG.ecl
+-rw-r--r-- 1 dataops dataops 1214 Mar 23 01:20 zz_Original_Base_Data_Extract.ecl
+-rw-r--r-- 1 dataops dataops 3228 Mar 23 01:20 _keys.ecl
+-rw-r--r-- 1 dataops dataops 2545 Mar 23 01:20 _layouts.ecl
+-rw-r--r-- 1 dataops dataops 4977 Mar 23 01:20 p1_build_base.ecl
+-rw-r--r-- 1 dataops dataops 1830 Mar 23 01:20 p1_file_output.ecl
+-rw-r--r-- 1 dataops dataops  648 Mar 23 01:20 p1_file_sprayed.ecl
+-rw-r--r-- 1 dataops dataops 2258 Mar 23 01:20 z_Build_Base_ORIG_TMP.ecl
+-rw-r--r-- 1 dataops dataops 2512 Mar 23 01:20 z_Fn_Rollup_Base_History_ORIG.ecl
+-rw-r--r-- 1 dataops dataops 4784 Mar 23 01:20 z_Fn_Rollup_Email_Data_ORIG.ecl
+-rw-r--r-- 1 dataops dataops 3682 Mar 23 01:20 _A_Dev_Notes.ecl
+-rw-r--r-- 1 dataops dataops 1642 Mar 23 01:20 _BWR_1_BuildMaster.ecl
+-rw-r--r-- 1 dataops dataops 1023 Mar 23 01:20 _BWR_2_Despray_Base.ecl
+-rw-r--r-- 1 dataops dataops  315 Mar 23 01:20 _BWR_9_ExtractThinData.ecl
+-rw-r--r-- 1 dataops dataops 7302 Mar 23 01:20 _constants.ecl
+-rw-r--r-- 1 dataops dataops  960 Mar 23 01:20 _files.ecl
+-rw-r--r-- 1 dataops dataops 6335 Mar 23 01:20 _functions.ecl
+-rw-r--r-- 1 dataops dataops 5638 Mar 23 01:20 Translation_Codes.ecl
+-rw-r--r-- 1 dataops dataops 3395 Mar 23 01:20 Fn_Append_Misc.ecl
+-rw-r--r-- 1 dataops dataops 2667 Mar 23 01:20 Fn_Clean_Email_Domain.ecl
+-rw-r--r-- 1 dataops dataops 2976 Mar 23 01:20 Fn_Propagate_Src_From_Multiple_Srcs.ecl
+-rw-r--r-- 1 dataops dataops 5260 Mar 23 01:20 Fn_Rollup_Email_Data.ecl
+-rw-r--r-- 1 dataops dataops 4630 Mar 23 01:20 Fn_Spray.ecl
+-rw-r--r-- 1 dataops dataops 6422 Mar 23 01:20 Map_P1_As_Email.ecl
+-rw-r--r-- 1 dataops dataops  981 Mar 23 01:20 Send_Build_Email_Notice.ecl
+-rw-r--r-- 1 dataops dataops  945 Mar 23 01:20 Build_Base.ecl
+-rw-r--r-- 1 dataops dataops 2927 Mar 23 01:20 Build_Keys.ecl
+-rw-r--r-- 1 dataops dataops 1589 Mar 23 01:20 Build_MASTER.ecl
+-rw-r--r-- 1 dataops dataops 1702 Mar 23 01:20 Create_AutoKeys_SuperFiles.ecl
+-rw-r--r-- 1 dataops dataops  884 Mar 23 01:20 Create_Superfiles.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Email_Data:
+total 44
+-rw-r--r-- 1 dataops dataops 1808 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  172 Mar 23 01:20 fn_Spray.ecl
+-rw-r--r-- 1 dataops dataops  137 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 3246 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 2059 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1430 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1727 Mar 23 01:20 Create_AutoKeys_SuperFiles.ecl
+-rw-r--r-- 1 dataops dataops  884 Mar 23 01:20 Create_Superfiles.ecl
+-rw-r--r-- 1 dataops dataops 1342 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 2217 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  950 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_EBR:
+total 92
+-rw-r--r-- 1 dataops dataops   138 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  3437 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 15403 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 17180 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 11708 Mar 23 01:20 bwr_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  1023 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  4922 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   384 Mar 23 01:20 fn_Spray.ecl
+-rw-r--r-- 1 dataops dataops  9785 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  4571 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Domains:
+total 56
+-rw-r--r-- 1 dataops dataops  6032 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 13208 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  3246 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   618 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops  5314 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops  3868 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops   283 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops   137 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops   594 Mar 23 01:20 proc_build_base.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Death_Master:
+total 60
+-rw-r--r-- 1 dataops dataops 7040 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops 1300 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops 4305 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops  143 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 4290 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops  181 Mar 23 01:20 Proc_Build_All.ecl
+-rw-r--r-- 1 dataops dataops  282 Mar 23 01:20 Proc_Build_Base.ecl
+-rw-r--r-- 1 dataops dataops 8065 Mar 23 01:20 Proc_Build_Keys.ecl
+-rw-r--r-- 1 dataops dataops 3880 Mar 23 01:20 Proc_Create_Relationships_SSA.ecl
+-rw-r--r-- 1 dataops dataops 2567 Mar 23 01:20 As_Headers.ecl
+-rw-r--r-- 1 dataops dataops 3929 Mar 23 01:20 BWR_One_Time_Code.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_DOC:
+total 92
+-rw-r--r-- 1 dataops dataops  1307 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  4143 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   649 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops 15516 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   267 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  2709 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 15981 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops   545 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 22264 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  4329 Mar 23 01:20 Keys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_DNB_FEIN:
+total 44
+-rw-r--r-- 1 dataops dataops 2791 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  116 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops  143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 5842 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 3947 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 1567 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  913 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1126 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops 3423 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops 2461 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_DEA:
+total 40
+-rw-r--r-- 1 dataops dataops 1894 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops  815 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops  527 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  442 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 4080 Mar 23 01:20 proc_build_key.ecl
+-rw-r--r-- 1 dataops dataops 2428 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 3026 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops 1321 Mar 23 01:20 constants.ecl
+-rw-r--r-- 1 dataops dataops 1257 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops  114 Mar 23 01:20 fspray.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Common:
+total 56
+-rw-r--r-- 1 dataops dataops  450 Mar 23 01:20 get_ds_of_Layout.ecl
+-rw-r--r-- 1 dataops dataops  526 Mar 23 01:20 MAC_CompareKeyVersions.ecl
+-rw-r--r-- 1 dataops dataops  571 Mar 23 01:20 mac_ConvertToUpperCase.ecl
+-rw-r--r-- 1 dataops dataops  374 Mar 23 01:20 PRTE_Header_Files.ecl
+-rw-r--r-- 1 dataops dataops 2316 Mar 23 01:20 SuperFiles.ecl
+-rw-r--r-- 1 dataops dataops 9852 Mar 23 01:20 Clean_Address.ecl
+-rw-r--r-- 1 dataops dataops 2371 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 5974 Mar 23 01:20 Cross_Module_Files.ecl
+-rw-r--r-- 1 dataops dataops 1221 Mar 23 01:20 DesprayCSV.ecl
+-rw-r--r-- 1 dataops dataops 2858 Mar 23 01:20 Email.ecl
+-rw-r--r-- 1 dataops dataops  683 Mar 23 01:20 Functions.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_CORP:
+total 68
+-rw-r--r-- 1 dataops dataops  7252 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops   192 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops  3288 Mar 23 01:20 bwr_one_time_code.ecl
+-rw-r--r-- 1 dataops dataops   459 Mar 23 01:20 fspray.ecl
+-rw-r--r-- 1 dataops dataops   229 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 16331 Mar 23 01:20 proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops  1083 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops   928 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  3083 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops  4165 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  4844 Mar 23 01:20 Layouts.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_Bankruptcy:
+total 76
+-rw-r--r-- 1 dataops dataops 20273 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  3361 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops   765 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  3287 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   456 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 16599 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  1608 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops   143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  1515 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops  7482 Mar 23 01:20 BWR_create_superfiles.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_BKEvents:
+total 40
+-rw-r--r-- 1 dataops dataops  272 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 3082 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops  587 Mar 23 01:20 fGetFCRARecs.ecl
+-rw-r--r-- 1 dataops dataops  103 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 1392 Mar 23 01:20 Keys.ecl
+-rw-r--r-- 1 dataops dataops  488 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  139 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops  757 Mar 23 01:20 BWR_Create_Superfiles.ecl
+-rw-r--r-- 1 dataops dataops  490 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  345 Mar 23 01:20 Files.ecl
+
+/data/hpcc/bocaprod/master/PRTE2_ATF:
+total 56
+-rw-r--r-- 1 dataops dataops 6435 Mar 23 01:20 proc_build_base.ecl
+-rw-r--r-- 1 dataops dataops 3663 Mar 23 01:20 proc_build_keys.ecl
+-rw-r--r-- 1 dataops dataops 9740 Mar 23 01:20 as_headers.ecl
+-rw-r--r-- 1 dataops dataops 2235 Mar 23 01:20 BWR_create_superfiles.ecl
+-rw-r--r-- 1 dataops dataops  782 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops 1012 Mar 23 01:20 files.ecl
+-rw-r--r-- 1 dataops dataops  123 Mar 23 01:20 fSpray.ecl
+-rw-r--r-- 1 dataops dataops 1925 Mar 23 01:20 keys.ecl
+-rw-r--r-- 1 dataops dataops  785 Mar 23 01:20 layouts.ecl
+-rw-r--r-- 1 dataops dataops  143 Mar 23 01:20 proc_build_all.ecl
+-rw-r--r-- 1 dataops dataops 3021 Mar 23 01:20 proc_build_autokeys.ecl
+
+/data/hpcc/bocaprod/master/PRTE2:
+total 176
+-rw-r--r-- 1 dataops dataops  1006 Mar 23 01:20 fn_AppendFakeID.ecl
+-rw-r--r-- 1 dataops dataops  2375 Mar 23 01:20 fn_format_date.ecl
+-rw-r--r-- 1 dataops dataops  2791 Mar 23 01:20 fn_PopulateLinkIDs.ecl
+-rw-r--r-- 1 dataops dataops   599 Mar 23 01:20 _Constants.ecl
+-rw-r--r-- 1 dataops dataops   945 Mar 23 01:20 _Dataset.ecl
+-rw-r--r-- 1 dataops dataops  7243 Mar 23 01:20 NEW_proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops  2209 Mar 23 01:20 Proc_build_foreclosure_bid.ecl
+-rw-r--r-- 1 dataops dataops  1437 Mar 23 01:20 RenameMissingKeys.ecl
+-rw-r--r-- 1 dataops dataops  4713 Mar 23 01:20 Scramble.ecl
+-rw-r--r-- 1 dataops dataops  1365 Mar 23 01:20 Spray.ecl
+-rw-r--r-- 1 dataops dataops  2309 Mar 23 01:20 SprayFiles.ecl
+-rw-r--r-- 1 dataops dataops 14865 Mar 23 01:20 Get_payload.ecl
+-rw-r--r-- 1 dataops dataops  1608 Mar 23 01:20 Join_files.ecl
+-rw-r--r-- 1 dataops dataops 60023 Mar 23 01:20 Layouts.ecl
+-rw-r--r-- 1 dataops dataops  7376 Mar 23 01:20 NEW_Proc_Build_Autokeys_bid.ecl
+-rw-r--r-- 1 dataops dataops  1518 Mar 23 01:20 AK_Constants.ecl
+-rw-r--r-- 1 dataops dataops  1099 Mar 23 01:20 BWR_NEW_proc_build_autokeys.ecl
+-rw-r--r-- 1 dataops dataops   317 Mar 23 01:20 Constants.ecl
+-rw-r--r-- 1 dataops dataops  6366 Mar 23 01:20 CopyEmptyFiles.ecl
+-rw-r--r-- 1 dataops dataops  1591 Mar 23 01:20 CopyMissingKeys.ecl
+-rw-r--r-- 1 dataops dataops   627 Mar 23 01:20 Filenames.ecl
+-rw-r--r-- 1 dataops dataops   309 Mar 23 01:20 Files.ecl
+-rw-r--r-- 1 dataops dataops   449 Mar 23 01:20 Flags.ecl

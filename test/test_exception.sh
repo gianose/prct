@@ -10,16 +10,16 @@ source ${TST_EXCP_DIR}'/../lib/unittest.sh'
 source ${TST_EXCP_DIR}'/../lib/exception.sh'
 declare TST_EXCP_TTL='Testing `lib/exception.sh`'
 declare -a TST_EXCP_EXAMS=(
-	"exception::incite - Zero param|255|''"
-	"exception::incite - One param|255|InvalidArgument"
-	"exception::incite - Non valid exception|255|CheeseBurger|This is a test"
-	"exception::incite - Third param neither 0 or 1|255|InvalidArgument|This is a test|2"
+	"exception::incite - Zero param|113|''"
+	"exception::incite - One param|113|InvalidArgument"
+	"exception::incite - Non valid exception|113|CheeseBurger|This is a test"
+	"exception::incite - Third param neither 0 or 1|113|InvalidArgument|This is a test|2"
 	"exception::incite - No third param|0|InvalidArgument|This is a test"
 	"exception::incite - With third param == 1|0|InvalidArgument|This is a test|1"
 	"exception::incite - With third param == 0|0|InvalidArgument|This is a test|0"
-	"exception::throw - The var stack is null and zero args|255|''"
-	"exception::throw - The var stack is null and one args|255|InvalidArgument"
-	"exception::throw - The var stack is null and two args|255|InvalidArgument|This is a test"
+	"exception::throw - The var stack is null and zero args|113|''"
+	"exception::throw - The var stack is null and one args|113|InvalidArgument"
+	"exception::throw - The var stack is null and two args|113|InvalidArgument|This is a test"
 )
 
 # Utilized in order to test all the functions included in lib/exception.sh
