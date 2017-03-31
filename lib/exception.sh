@@ -61,6 +61,5 @@ throw() {
 	for s in "${stack[@]}"; do
 		(>&2 printf "%$((${#s}+5))s\n" "${s%\|*}")
 	done
-	
 	exit ${EXCEPTION[${1}]}
 }

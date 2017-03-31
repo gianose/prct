@@ -8,15 +8,15 @@
 
 declare DB_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source ${DB_DIR}'/../lib/exception.sh'
 source ${DB_DIR}'/../lib/constants.sh'
+source ${NAMESPACE}'lib/exception.sh'
 
 declare DB 
 
 declare -A DML=(
 	[SELECT]='^select\s+(\w|\*)+(,\s+\w+)*\s+from\s(?!where).+$'
-	[INSERT]='^insert\s+into\s+\w+\s+(\((\w+,\s+)*\w+\)\s+)?(values\s+\((\w+,\s+)*\w+\)|select.*from.*)'
-	[UPDATE]='^update\s+\w+\s+set(\s+\w+\s+=\s+\w+,?)+(\s+where.*)?$'
+	[INSERT]='^insert\s+into\s+\w+\s+(\((\w+,\s*)*\w+\)\s+)?(values\s+\(\s*(('"'"'?\w+'"'"'?|\d+)(\.\d+)?,\s*)*('"'"'?\w+'"'"'?|\d+)(\.\d+)?\s*\)|select.*from.*)$'
+	[UPDATE]='^update\s+\w+\s+set(\s+\w+\s*=\s*'"'"'?\w+'"'"'?,?)+(\s+where.*)?$'
 	[DELETE]='^delete\s+from\s+(?!where)\w+(\s+where.*)?'
 )
 
@@ -28,27 +28,35 @@ declare -a db_headers
 # @arg:<string>:opt - The absolute path to desired sqlite3 db file.
 db_init() {
 	local _db=${CONST_DB}
-	[ ${1} ] && _db=${1}
 	
+	if [ "${*}" ]; then 
+		db_do_chk "${@}"
+		
+		[ $? -eq 0 ] && _db=${1}
+	fi 	
+
 	[ -e ${_db} ] || throw "IOError" "No such file or directory: '${_db}'"
 
 	[[ ( -s ${_db} ) && ( -r ${_db} ) && ( -w ${_db} ) ]] || throw "IOError" "The db file is inaccessible: '${_db}'"
 
 	DB=${_db}
+
+	return 0
 }
 
 # Executes the provided select statement against the DB.
+# @public
 # @arg:<string> - The 'SELECT' statement to be executed.
 db_do_query() {
 	db_do_chk "${@}"
 	
 	local rslt
+		
+	local qry=$(echo ${1} | grep -P -i -o '^select')
 
-	#[[ $( echo ${1} | perl -e 'print <STDIN> =~ @ARGV ? 0 : 1' ${db_select_regex} ) -eq 1 ]] && throw "InvalidArgument" "The provided query is improperly formated: ${1}"
+	[[ (${qry}) && (${DML[${qry}]}) ]] || throw "InvalidArgument" "The provided query is not supported by the 'prct.db' module: ${1}"
 	
-	local qry=$(echo ${1} | grep -P -i -o '^select') || throw "InvalidArgument" "The provided query is not supported by the 'prct.db' module: ${1}"
-
-	$( echo ${1} | grep -P -i -q "${DML[${qry}]}" ) || throw "InvalidArgument" "The provided query is improperly formated: ${1}"
+	$( echo "${1}" | grep -P -i -q "${DML[${qry}]}" ) || throw "InvalidArgument" "The provided query is improperly formated: ${1}"
 
 	rslt=$(sqlite3 -separator ',' ${DB} "${1}" 2>&1) || throw "DatabaseException" "Query (${1}) failed with the following error: ${rslt}" 	
 	
@@ -60,11 +68,13 @@ db_do_query() {
 }
 
 # Executes the provided dml statement againt the DB.
+# @public
 # @arg:<string> - The 'DML' statement to be executed.
 db_do_dml() {
 	db_do_chk "${@}"
 
-	local rslt 
+	local rslt
+
 	local dml=$(echo ${1} | grep -P -i -o '^(insert|update|delete)')
 	
 	[[ (${dml}) && (${DML[${dml}]}) ]] || throw "InvalidArgument" "The provided dml is not supported by the 'prct.db' module: ${1}"
@@ -81,9 +91,14 @@ db_do_dml() {
 # @private
 # @arg:<array> - The parameters passed to the calling function.
 db_do_chk() {
+
 	[[ ( ${#@} -gt 1 ) || ( ${#@} -lt 1 ) ]] && throw "InvalidArgument" "Invalid number of arguments provided"
+
+	if [[ "${FUNCNAME[$((${#FUNCNAME[@]} - $((${#FUNCNAME[@]} - 1))))]}" != 'db_init' ]]; then
+		[ ${DB} ] || throw "InitalizationError" "The module DB was not initalized run db_init"
+	fi
 	
-	[ ${DB} ] || throw "InitalizationError" "The module DB was not initalized run db_init"
+	return 0
 }
 
 # Set the variable db_rows the results produced by the db_do_query function.
@@ -132,14 +147,4 @@ db_get_table() {
 	echo $(echo ${1} | grep -P -i -o 'from.+' | awk '{print $2}')
 }
 
-db_init ${DB_DIR}'/../db/prct.db'
-#db_init ${DB_DIR}'/../db/fake.db'
-#db_get_table "SELECT * FROM table"
-#db_get_table "SELECT * FROM table WHERE x=y"
-#db_do_query "SELECT a, b, c FROM table WHERE x=y"
-#db_do_query 'SELECT * FROM datasets WHERE dataset_id IN (1, 2)'
-#db_do_query 'SELECT dataset_id, dataset_name, dataset_string FROM datasets WHERE dataset_id IN (1,2)'
-#db_do_dml 'INSERT INTO TABLE_NAME VALUES (value1, value2, value3, value3)' 'blah'
-#db_do_dml 'PUT INTO TABLE_NAME VALUES (value1, value2, value3, value3)'
-#db_do_dml 'INSERT INTO TABLE_NAME (value1, value2, value3, value3)'
-#db_do_dml 'INSERT INTO TABLE_NAME VALUES (value1, value2, value3, value3)'
+db_init

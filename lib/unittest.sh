@@ -12,9 +12,9 @@ runSingleInput() {
 	declare -a params
 	declare -a tests=("${!1}")
 	for tsk in "${tests[@]}"; do
-		IFS=',' read -r -a params <<< ${tsk}
+		IFS=';' read -r -a params <<< ${tsk}
 		local _f=${params[0]%% - *}; _f=${_f##*::}
-		$($_f ${params[2]} 2> /dev/null)
+		$($_f "${params[2]}" &> /dev/null)
 		assertEquals "${params[0]}" ${params[1]} $?
 	done
 }
@@ -22,17 +22,19 @@ runSingleInput() {
 # Run the provided function with multiple arguments, up to three.
 # @arg:<array> - An array of comma dilimited strings.
 runMultiInput() {
+	local delimiter=';'
+	[ ${2} ] && delimiter=${2}
 	declare -a params
 	declare -a tests=("${!1}")
 	for tsk in "${tests[@]}"; do
-		IFS=',' read -r -a params <<< ${tsk}
+		IFS=${delimiter} read -r -a params <<< ${tsk}
 		local _f=${params[0]%% - *}; _f=${_f##*::}
 		case ${#params[@]} in
 			2) $($_f &> /dev/null)
 				;;
 			3) $($_f "${params[2]}" &> /dev/null)
 				;;
-			4) $($_f ${params[2]} "${params[3]}" &> /dev/null)
+			4) $($_f "${params[2]}" "${params[3]}" &> /dev/null)
 				;;
 			5) $($_f "${params[2]}" "${params[3]}" "${params[4]}" &> /dev/null)
 				;;
@@ -44,11 +46,14 @@ runMultiInput() {
 # Run the provided function against the provided test funtion.
 # @arg:<array> - An array of comma dilimited strings.
 runCustom() {
+	local delimiter=';'
 	declare -a params
 	declare -a tests=("${!1}")
 	for tsk in "${tests[@]}"; do
-		IFS=',' read -r -a params <<< ${tsk}
-		assertEquals "${params[0]}" ${params[1]} $($2 params[@])
+		IFS=${delimiter} read -r -a params <<< ${tsk}
+		#$($2 params[@])
+		$2 params[@]
+		assertEquals "${params[0]}" ${params[1]} ${?}
 	done
 }
 

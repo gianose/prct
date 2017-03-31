@@ -10,3 +10,4 @@ declare NAMESPACE="$( cd ${CONST_DIR}'/../' && pwd)/"
 declare EVENT=${NAMESPACE}'log/event.log'
 declare ERROR=${NAMESPACE}'log/error.log'
 declare FORMAT='%Y-%m-%d %H:%H:%S'
+declare CONST_DB=${NAMESPACE}'db/prct.db'
