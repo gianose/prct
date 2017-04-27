@@ -12,7 +12,7 @@ declare TST_DB=${TST_DB_DIR}'/../db/'
 
 source ${TST_LIB}'unittest.sh'
 source ${TST_LIB}'db.sh'
-source ${TST_LIB}'exception.sh'
+source ${TST_LIB}'excp.sh'
 
 declare TST_DB_TTL='Testing `lib/db.sh`'
 

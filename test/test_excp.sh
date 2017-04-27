@@ -7,8 +7,8 @@
 declare TST_EXCP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source ${TST_EXCP_DIR}'/../lib/unittest.sh'
-source ${TST_EXCP_DIR}'/../lib/exception.sh'
-declare TST_EXCP_TTL='Testing `lib/exception.sh`'
+source ${TST_EXCP_DIR}'/../lib/excp.sh'
+declare TST_EXCP_TTL='Testing `lib/excp.sh`'
 declare -a TST_EXCP_EXAMS=(
 	"exception::incite - Zero param|113|''"
 	"exception::incite - One param|113|InvalidArgument"
@@ -23,7 +23,7 @@ declare -a TST_EXCP_EXAMS=(
 )
 
 # Utilized in order to test all the functions included in lib/exception.sh
-test_exception_main() {
+test_excp_main() {
 	printf "%s\n" "${TST_EXCP_TTL}"
 	declare -a params
 	for tsk in "${TST_EXCP_EXAMS[@]}"; do
@@ -43,4 +43,4 @@ test_exception_main() {
 }
 
 
-test_exception_main
+test_excp_main

@@ -5,19 +5,7 @@
 # When sourced, provides a set of methods that can be utilized in order to unit test a script.
 
 declare UNT_TST_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Run the provided function with a single input.
-# @arg:<array> - An array of comma dilimited strings.
-runSingleInput() {
-	declare -a params
-	declare -a tests=("${!1}")
-	for tsk in "${tests[@]}"; do
-		IFS=';' read -r -a params <<< ${tsk}
-		local _f=${params[0]%% - *}; _f=${_f##*::}
-		$($_f "${params[2]}" &> /dev/null)
-		assertEquals "${params[0]}" ${params[1]} $?
-	done
-}
+declare -a stack
 
 # Run the provided function with multiple arguments, up to three.
 # @arg:<array> - An array of comma dilimited strings.
@@ -38,6 +26,8 @@ runMultiInput() {
 				;;
 			5) $($_f "${params[2]}" "${params[3]}" "${params[4]}" &> /dev/null)
 				;;
+			6) $($_f "${params[2]}" "${params[3]}" "${params[4]}" "${params[5]}" &> /dev/null)
+				;;
 		esac
 		assertEquals "${params[0]}" ${params[1]} $?
 	done
@@ -51,7 +41,6 @@ runCustom() {
 	declare -a tests=("${!1}")
 	for tsk in "${tests[@]}"; do
 		IFS=${delimiter} read -r -a params <<< ${tsk}
-		#$($2 params[@])
 		$2 params[@]
 		assertEquals "${params[0]}" ${params[1]} ${?}
 	done
@@ -68,8 +57,10 @@ assertEquals() {
 	local msg=$1
 	local exp=$2
 	local act=$3
+	local frame=0
 
 	if [ "${exp}" != "${act}" ]; then
+		while stack+=("$(caller ${frame}) |"); do ((frame++)); done
 		output "${msg}" "---->FAILER!?!: EXPECTED=${exp} ACTUAL=${act}<----"
 		exit 1
 	else
@@ -85,7 +76,13 @@ output() {
 	local form="%s\n"
 
 	out="${1}: ${2}"
-	from="%$((${#out}+4))s\n"
+	form="%$((${#out}+4))s\n"
 
-	printf "${from}" "${out}"
+	printf "${form}" "${out}"
+
+	if [ ${#stack[@]} -ne 0 ]; then
+		for s in "${stack[@]}"; do
+			printf "%$((${#s}+5))s\n" "${s%\|*}"
+		done
+	fi
 }

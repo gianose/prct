@@ -7,7 +7,7 @@
 # @const:<string> FORMAT    The desired format of PRCT related date strings.
 declare CONST_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 declare NAMESPACE="$( cd ${CONST_DIR}'/../' && pwd)/"
-declare EVENT=${NAMESPACE}'log/event.log'
-declare ERROR=${NAMESPACE}'log/error.log'
-declare FORMAT='%Y-%m-%d %H:%H:%S'
+declare EVENT=${NAMESPACE}'logs/event.log'
+declare ERROR=${NAMESPACE}'logs/error.log'
+declare FORMAT='%Y-%m-%d %H:%M:%S'
 declare CONST_DB=${NAMESPACE}'db/prct.db'

@@ -8,8 +8,8 @@
 
 declare DB_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source ${DB_DIR}'/../lib/constants.sh'
-source ${NAMESPACE}'lib/exception.sh'
+source ${DB_DIR}'/../lib/const.sh'
+source ${NAMESPACE}'lib/excp.sh'
 
 declare DB 
 
@@ -25,7 +25,7 @@ declare -a db_headers
 
 # Verifies that the db (the db provided via the param, or the one defined in contants.sh) file exists.
 # If the existants of the db files is verified then the `DB` variable is set, else an error is thrown.
-# @arg:<string>:opt - The absolute path to desired sqlite3 db file.
+# @args:<string>:opt - The absolute path to desired sqlite3 db file.
 db_init() {
 	local _db=${CONST_DB}
 	
@@ -46,7 +46,7 @@ db_init() {
 
 # Executes the provided select statement against the DB.
 # @public
-# @arg:<string> - The 'SELECT' statement to be executed.
+# @args:<string> - The 'SELECT' statement to be executed.
 db_do_query() {
 	db_do_chk "${@}"
 	
@@ -69,7 +69,7 @@ db_do_query() {
 
 # Executes the provided dml statement againt the DB.
 # @public
-# @arg:<string> - The 'DML' statement to be executed.
+# @args:<string> - The 'DML' statement to be executed.
 db_do_dml() {
 	db_do_chk "${@}"
 
@@ -89,7 +89,7 @@ db_do_dml() {
 # Check to ensure that the variable DB is set and the correct number of args
 # have been passed to the calling function.
 # @private
-# @arg:<array> - The parameters passed to the calling function.
+# @args:<array> - The parameters passed to the calling function.
 db_do_chk() {
 
 	[[ ( ${#@} -gt 1 ) || ( ${#@} -lt 1 ) ]] && throw "InvalidArgument" "Invalid number of arguments provided"
@@ -104,7 +104,7 @@ db_do_chk() {
 # Set the variable db_rows the results produced by the db_do_query function.
 # @private
 # @static
-# @arg:<string> - A semicolon delimited string
+# @args:<string> - A semicolon delimited string
 db_set_rows() {
 	local rslt=$(echo "${1}" | tr -s '\n\r' ';') 
 	
@@ -113,7 +113,7 @@ db_set_rows() {
 
 # Set the variable db_headers to the headers 
 # @private
-# @arg:<string> - The 'SELECT' statement to be parsed.
+# @args:<string> - The 'SELECT' statement to be parsed.
 db_set_headers() {
 	if $(echo "${1}" | grep -P -q -i 'select\s+\*\s+from\s(?!where)'); then
 		local tbl=$(db_get_table "${1}")
@@ -141,7 +141,7 @@ db_get_headers() {
 # Parsed from the provided 'SELECT' query the table that is being queried.
 # @private
 # @static
-# @arg:<string> - The 'SELECT' statement in which the table name needs to b parsed from.
+# @args:<string> - The 'SELECT' statement in which the table name needs to b parsed from.
 # @return:<string> - The name of the table included in the select statment.
 db_get_table() {
 	echo $(echo ${1} | grep -P -i -o 'from.+' | awk '{print $2}')
