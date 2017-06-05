@@ -1,4 +1,4 @@
-# !/usr/bin/env bash
+#!/usr/bin/env bash
 # Author: Gregory Rose
 # Created: 20170406
 # Name: form.sh
