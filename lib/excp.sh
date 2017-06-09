@@ -44,8 +44,11 @@ excp_set_code() {
 		'FatalError')
 			excp_code="107"
 			;;
-		'InvalidConfiguration' )
+		'InvalidConfiguration')
 			excp_code="106"
+			;;
+		'AccessFailed')
+			excp_code="105"
 			;;
 		*) 
 			throw "${EXCP_INV_ARG[0]}" "${1}${EXCP_INV_ARG[2]}"

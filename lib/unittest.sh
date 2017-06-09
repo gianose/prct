@@ -5,6 +5,9 @@
 # When sourced, provides a set of methods that can be utilized in order to unit test a script.
 
 declare UNT_TST_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "${UNT_TST_DIR}/const.sh"
+
 declare -a stack
 
 # Run the provided function with multiple arguments, up to three.
@@ -12,21 +15,26 @@ declare -a stack
 runMultiInput() {
 	local delimiter=';'
 	[ ${2} ] && delimiter=${2}
+	local to='/dev/null'
+	[ ${3} ] && { 
+		to="${NAMESPACE}log/${BASH_SOURCE[1]##*/}.unit_test.log"
+		[[ -f ${to} ]] && { truncate -s 0 ${to}; } || { touch ${to}; }
+	}
 	declare -a params
 	declare -a tests=("${!1}")
 	for tsk in "${tests[@]}"; do
 		IFS=${delimiter} read -r -a params <<< ${tsk}
 		local _f=${params[0]%% - *}; _f=${_f##*::}
 		case ${#params[@]} in
-			2) $($_f &> /dev/null)
+			2) $($_f &>> ${to})
 				;;
-			3) $($_f "${params[2]}" &> /dev/null)
+			3) $($_f "${params[2]}" &>> ${to})
 				;;
-			4) $($_f "${params[2]}" "${params[3]}" &> /dev/null)
+			4) $($_f "${params[2]}" "${params[3]}" &>> ${to})
 				;;
-			5) $($_f "${params[2]}" "${params[3]}" "${params[4]}" &> /dev/null)
+			5) $($_f "${params[2]}" "${params[3]}" "${params[4]}" &>> ${to})
 				;;
-			6) $($_f "${params[2]}" "${params[3]}" "${params[4]}" "${params[5]}" &> /dev/null)
+			6) $($_f "${params[2]}" "${params[3]}" "${params[4]}" "${params[5]}" &>> ${to})
 				;;
 		esac
 		assertEquals "${params[0]}" ${params[1]} $?
