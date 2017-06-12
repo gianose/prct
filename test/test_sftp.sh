@@ -17,9 +17,10 @@ declare TST_SFTP_TMP="${NAMESPACE}tmp"
 declare TST_SFTP_LPRP="${TST_SFTP_TMP}/prp"
 declare TST_SFTP_LSRC="${TST_SFTP_TMP}/src"
 declare TST_SFTP_LDST="${TST_SFTP_TMP}/dst"
+declare TST_SFTP_LMDR="${TST_SFTP_TMP}/$(date +%Y%m%d%I%M%S)"
 
-declare -a TST_SFTP_LFILES=( "${TST_SFTP_LSRC}/_20170607" "${TST_SFTP_LSRC}/_20170608" "${TST_SFTP_LDST}/_20170610" )
-declare -a TST_SFTP_RFILES=( "${TST_SFTP_LPRP}/_20170606" "${TST_SFTP_LPRP}/_20170609" "${TST_SFTP_LPRP}/_20170610" )
+declare -a TST_SFTP_LFILES=( "${TST_SFTP_LSRC}/_20170607" "${TST_SFTP_LSRC}/_20170608a" "${TST_SFTP_LSRC}/_20170608b" "${TST_SFTP_LSRC}/_20170608c" "${TST_SFTP_LDST}/_20170610" )
+declare -a TST_SFTP_RFILES=( "${TST_SFTP_LPRP}/_20170606" "${TST_SFTP_LPRP}/_20170609a" "${TST_SFTP_LPRP}/_20170609b" "${TST_SFTP_LPRP}/_20170609c" "${TST_SFTP_LPRP}/_20170610" )
 
 declare TST_SFTP_RDIR="test/sftp"
 
@@ -62,7 +63,7 @@ declare -a TST_SFTP_ERROR=(
 	"sftp::sftp_move - Exception: Attempt to call sftp_move with more than two params;113;foo;bar;blah"
 	"sftp::sftp_move - Exception: Attempt to move a file/directory that does not exist;105;${TST_SFTP_RSRC}/_20170611;${TST_SFTP_RSRC}/20170611"
 	"sftp::sftp_move - Exception: Attempt to move a file/directory to a destination that does not exist;105;${TST_SFTP_RSRC}/_20170610;not/real/dst/20170610"
-	"sftp::sftp_move - Exception: Attempt to move a file/directory to a destination that already exist;105;${TST_SFTP_RSRC}/_20170610;${TST_SFTP_RSRC}/_20170609"
+	"sftp::sftp_move - Exception: Attempt to move a file/directory to a destination that already exist;105;${TST_SFTP_RSRC}/_20170610;${TST_SFTP_RSRC}/_20170609a"
 	"sftp::sftp_mkdir - Exception: Attempt to call sftp_mkdir with less than ONE params;113"
 	"sftp::sftp_mkdir - Exception: Attempt to call sftp_mkdir with more than TWO params;113;foo;bar;blah"
 	"sftp::sftp_mkdir - Exception: Attempt to call sftp_mkdir with an invalied option;113;${TST_SFTP_RMDR};P"
@@ -73,15 +74,24 @@ declare -a TST_SFTP_ERROR=(
 
 declare -a TST_SFTP_CORRECT=(
 	"sftp::sftp_list - List content of directory;0;${TST_SFTP_RSRC}"
-	"sftp::sftp_list - List content of direcotry, utilizing supported option;0;${TST_SFTP_RSRC};l"
-	""
+	"sftp::sftp_list - List content of directry, utilizing supported option;0;${TST_SFTP_RSRC};l"
+	"sftp::sftp_get - Get specified remote file;0;${TST_SFTP_RSRC}/_20170606;${TST_SFTP_LDST}"
+	"sftp::sftp_get - Get specified remote files;0;${TST_SFTP_RSRC}/_20170609a,${TST_SFTP_RSRC}/_20170609b,${TST_SFTP_RSRC}/_20170609c;${TST_SFTP_LDST}"
+	"sftp::sftp_put - Put specified local file in remote destination;0;${TST_SFTP_LSRC}/_20170607;${TST_SFTP_RDST}"
+	"sftp::sftp_put - Put specified local files in remote destination;0;${TST_SFTP_LSRC}/_20170608a,${TST_SFTP_LSRC}/_20170608b,${TST_SFTP_LSRC}/_20170608c;${TST_SFTP_RDST}"
+	"sftp::sftp_mkdir - Created a remote directory;0;${TST_SFTP_RMDR}"
+	"sftp::sftp_pull - Pull the content of remote source to local destination;0;${TST_SFTP_RSRC};${TST_SFTP_LMDR}"
+	"sftp::sftp_push - Push the content of local source to remote destination;0;${TST_SFTP_LSRC};${TST_SFTP_RMDR}"
+	"sftp::sftp_move - Rename remote source file;0;${TST_SFTP_RSRC}/_20170610;${TST_SFTP_RSRC}/20170610"
+	"sftp::sftp_move - Move remote source file to remote destination directory;0;${TST_SFTP_RSRC}/20170610;${TST_SFTP_RDST}"
 )
 
 tst_sftp_main(){
 	printf "%s\n" "${TST_SFTP_TTL}"
+	tst_sftp_prepLocal
+	tst_sftp_prepRemote
 	tst_sftp_error
-	#tst_sftp_prepLocal
-	#tst_sftp_prepRemote
+	tst_sftp_correct
 }
 
 # Test a majority of the possible scenarios which would cause sftp.sh to throw an error.
@@ -90,8 +100,13 @@ tst_sftp_error() {
 	runMultiInput TST_SFTP_ERROR[@] '' 1
 }
 
+tst_sftp_correct() {
+	printf "%8s\n" "CORRECT"
+	runMultiInput TST_SFTP_CORRECT[@] '' 1
+}
+
 tst_sftp_prepLocal() {
-	declare -a _l=("${TST_SFTP_LSRC}" "${TST_SFTP_LDST}" "${TST_SFTP_LPRP}")
+	declare -a _l=("${TST_SFTP_LSRC}" "${TST_SFTP_LDST}" "${TST_SFTP_LPRP}" "${TST_SFTP_LMDR}")
 
 	tst_sftp_print
 

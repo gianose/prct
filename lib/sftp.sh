@@ -74,9 +74,7 @@ sftp() {
 
 		local dir="${1};"
 
-		[ ${2} ] && { [[ ${2} =~ ${options} ]] || sftp_throw 2 $(echo "${2}" | sed -e "s/\(1\|B\|d\|s\|l\|h\|k\|D\|S\)//"); } 
-
-		cmd_lst+=( "-${2}" )
+		[ ${2} ] && { [[ ${2} =~ ${options} ]] && { cmd_lst+=( "-${2}" ); } || { sftp_throw 2 $(echo "${2}" | sed -e "s/\(1\|B\|d\|s\|l\|h\|k\|D\|S\)//"); }; } 
 
 		sftp_checkRemoteExist ${dir} || sftp_throw 3 "${RDST}" ${dir} "${output}"
 
@@ -134,10 +132,10 @@ sftp() {
 		declare -a files
 
 		[[ ${1} =~ ',' ]] && { IFS=',' read -r -a files <<< "${1}"; } || { files=("${1}"); }
-
+		
 		for f in "${files[@]}"; do
-			sftp_checkLocalExist ${1} || sftp_throw 3 "${LSRC}" ${1}
-			sftp_checkLocalIsDir ${1} && sftp_throw 4 "${LSRC}" ${1} 1 'push'
+			sftp_checkLocalExist ${f} || sftp_throw 3 "${LSRC}" ${f}
+			sftp_checkLocalIsDir ${f} && sftp_throw 4 "${LSRC}" ${f} 1 'push'
 		done
 
 		cmd_lst+=("${files[@]}")
@@ -226,7 +224,7 @@ sftp() {
 				sftp_throw 5 "${RDST}" ${dst}
 			}	
 		} || { 
-			[[ $(sftp_checkRemoteExist ${dst%/*}) && $(sftp_checkRemoteIsDir ${dst%/*}) ]] || sftp_throw 3 "remote parent directory" "${dst%/*}"
+			sftp_checkRemoteIsDir ${dst%/*} || sftp_throw 3 "remote parent directory" "${dst%/*}"
 		}
 			
 		cmd_lst+=("${dst};")
@@ -367,33 +365,3 @@ private() {
 }
 
 sftp ${@}
-#(1|B|d|s|l|h|k|D|S)
-#$(sftp_list 'test' '1z')
-#sftp_list 'test' '1B'
-#sftp_list 'test' 'lh'
-#$(sftp_list 'test' 'lm')
-#$(sftp_get > ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_get 'test1.txt,test2.txt,x.nope' '/home/rosegr01/lock' 'bar' >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_get 'test1.txt,test2.txt,x.nope' '/home/rosegr01/open' >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_get 'test1.txt,test2.txt' '/home/rosegr01/lock' >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_get 'test' '/home/rosegr01/open' >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_get 'test1.txt,test2.txt' '/home/rosegr01/open' &>> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull 'nope' "${NAMESPACE}tmp/ldst" 'blah' >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull 'nope' "${NAMESPACE}tmp/ldst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull 'test' "${NAMESPACE}tmp/nope" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull 'test1.txt' "${NAMESPACE}tmp/ldst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_pull 'rsrc' "${NAMESPACE}tmp/ldst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc/nope" "rdst" "blah" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc/nope" "rdst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc" "rdst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc/file1" "nope" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc/file1" "test1.txt" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_put "${NAMESPACE}tmp/lsrc/file1" "test/bsftp/dst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_push >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_push "${NAMESPACE}tmp/lsrc/file1" "test/bsftp/dst", "blah" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_push "${NAMESPACE}tmp/lsrc/nope" "test/bsftp/dst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_push "${NAMESPACE}tmp/lsrc/file1" "test/bsftp/dst" >> ${NAMESPACE}tmp/lsrc/file1)
-#$(sftp_push "${NAMESPACE}tmp/lsrc" "nope" >> ${NAMESPACE}tmp/lsrc/file1)
-#sftp_move "test/sftp/src/_20170610" "not/real/destination/20170610"
