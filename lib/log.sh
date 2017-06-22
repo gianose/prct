@@ -9,9 +9,11 @@ LOG_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source ${LOG_DIR}'/const.sh'
 source ${LOG_DIR}'/excp.sh'
 
-declare log_event
-declare log_error
-declare log_on=false
+declare log_event        # Utilized in order to store the absolute path for event log file. 
+declare log_error        # Utilized in order to store the absolute path for error log file.
+declare log_is_err=false # Utilized in order to indicate whether or not the previous log written was a error log.
+declare log_on=false     # Utilized in order to indicate that the correponding instance of log has been initalized. 
+
 
 # @private
 # @static
@@ -25,11 +27,12 @@ log_private() {
 # @args:<array>:opt - List of absolute paths for the event and error logs. 
 log_init(){
 	[[ ( ${#@} -gt 2 ) ]] && throw 'InvalidArgument' 'Invalid number of arguments provided'
-	
-	if [ ${#@} -eq 0 ]; then
-		log_error=${ERROR}
-		log_event=${EVENT}
-	fi
+
+	[[ ${#@} -eq 0 ]] && {
+		log_make ${LOG}
+		log_error="${LOG}/${BASH_SOURCE[2]%.*}.error.log"
+		log_event="${LOG}/${BASH_SOURCE[2]%.*}.event.log"
+	}
 	
 	[ ${1} ] && { log_make ${1} && log_error=${1}; }
 	
@@ -67,7 +70,6 @@ log_make(){
 log_error(){
 	log_chk_arg ${@}
 	declare -a _s=("${!1}")
-	#IFS='|' read -r -a _s <<< ${1}
 	local _p=`log_fore`
 
 	printf "${_p} %15s\n" "${_s[0]%\|*}" >> ${log_error}
@@ -76,6 +78,10 @@ log_error(){
 	for s in "${_s[@]}"; do
 		printf "%10s%s\n" "" "${s%\|*}" >> ${log_error}
 	done
+
+	log_is_err=true
+
+	return 0
 }
 
 # Write the provided message to the event log.
@@ -88,6 +94,8 @@ log_event(){
 	 
 	printf "${_p} %15s\n" "${_m}" >> "${log_event}"
 
+	log_is_err=false
+
 	return 0
 }
 
@@ -96,7 +104,32 @@ log_event(){
 # @args:<array> - All args provided to the caller.
 log_chk_arg(){
 	log_private
-	[[ ( ${#@} -gt 1 ) || ( ${#@} -lt 1 ) ]] && throw "InvalidArgument" "Invalid number of arguments provided"
+	[[ (( ${#@} != 1 )) ]] && throw "InvalidArgument" "Invalid number of arguments provided"
+}
+
+# Utilized in order to send the logged error or event via email to the contacts specified in BUILD_CONTACTS. 
+# @public
+# @args:<string> - The subject of the email to be sent.
+log_send() {
+	log_chk_arg ${@}
+	
+	local _e=''
+
+	${log_is_err} && { _e=$(printf '%s\n\n%s\n' "$(cat ${log_error})" "${STEPS}"); } || { _e=$(cat ${log_event}); }
+	
+	log_mail "${1}" "${_e}"
+	
+	return 0
+}
+
+# Utilized in order to send the content of the event or error log via email.
+# @private
+# @args:<string> - The subject of the email to be sent.
+# @args:<string> - The log file containing content to be included in email.
+log_mail() {
+	log_private
+	#mailx -s "${BUILD_NAME}::$(date +"${FORMAT}")::${eclsourceip} ${1}" ${BUILD_CONTACTS} < "${2}"
+	printf '%s\n' "${2}" | mailx -s "${BUILD_NAME}::$(date +"${FORMAT}")::${eclsourceip} ${1}" ${BUILD_CONTACTS}
 }
 
 # Returns to the caller a formatted string containing the current date and time, and the
@@ -113,17 +146,7 @@ log_fore(){
 
 	local msg=""
 	
-	printf "${_d} %15s:%s:%s:" "${_f}" "${_l}" "${_m}"	
+	printf "${_d} %15s::%s::%s" "${_f}" "${_m}"	"${_l}"
 }
 
-#log_init $@
-
-#log_init
-#log_init "${NAMESPACE}tmp/role/error.log"
-#log_init "${NAMESPACE}tmp/role/error.log" "${NAMESPACE}tmp/role/event.log"
-#log_init foo bar ham
-#log_init "${NAMESPACE}not/real/dir/event.log"
-#echo ${log_on}
-#echo ${log_error}
-#echo ${log_event}
-
+log_init ${@}

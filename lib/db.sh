@@ -8,10 +8,8 @@
 
 declare DB_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source ${DB_DIR}'/../lib/const.sh'
-source ${NAMESPACE}'lib/excp.sh'
-
-declare DB 
+source "${DB_DIR}/../lib/const.sh"
+source "${NAMESPACE}/lib/excp.sh"
 
 declare -A DML=(
 	[SELECT]='^select\s+(\w|\*)+(,\s+\w+)*\s+from\s(?!where).+$'
@@ -27,7 +25,7 @@ declare -a db_headers
 # If the existants of the db files is verified then the `DB` variable is set, else an error is thrown.
 # @args:<string>:opt - The absolute path to desired sqlite3 db file.
 db_init() {
-	local _db=${CONST_DB}
+	local _db=${DB}
 	
 	if [ "${*}" ]; then 
 		db_do_chk "${@}"
@@ -38,8 +36,6 @@ db_init() {
 	[ -e ${_db} ] || throw "IOError" "No such file or directory: '${_db}'"
 
 	[[ ( -s ${_db} ) && ( -r ${_db} ) && ( -w ${_db} ) ]] || throw "IOError" "The db file is inaccessible: '${_db}'"
-
-	DB=${_db}
 
 	return 0
 }

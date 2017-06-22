@@ -2,18 +2,18 @@
 # Author: Gregory Rose
 # Created: 20170406
 # Name: Test Form
-# Relative Working Directory: ${NAMESPACE}test/test_form.sh
+# Relative Working Directory: ${NAMESPACE}/test/test_form.sh
 # Description: Utilized in order to test that the form module is working as expected.
 
 declare TST_FORM_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${TST_FORM_DIR}/../lib/const.sh"
-source "${NAMESPACE}lib/form.sh"
-source "${NAMESPACE}lib/unittest.sh"
+source "${NAMESPACE}/lib/form.sh"
+source "${NAMESPACE}/lib/unittest.sh"
 
 declare TST_FORM_TTL='Testing `lib/form.sh`'
 declare TST_FORM_MD5='4958112c677a75d03e27d778a070956f'
-declare TST_FORM_OUT="${NAMESPACE}tmp/form.out"
+declare TST_FORM_OUT="${NAMESPACE}/tmp/form.out"
 declare -a TST_FORM_ERR=(
 	"form::form_throw - Attempt to call private function 'from_throw';108"
 	"form::form_title - Attempt to call private function 'from_title';108"

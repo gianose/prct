@@ -19,7 +19,7 @@ declare -a TST_LOG_ERR=(
 	"log::log_chk_arg - Attempt to call private function 'log_chk_arg';108;"
 	"log::log_fore - Attempt to call private function 'log_fore';108;"
 	"log::log_init - More than two params;113;foo;bar;ham"
-	"log::log_init - Attempt to init with not real directory;110;${NAMESPACE}not/real/dir/error.log"
+	"log::log_init - Attempt to init with not real directory;110;${NAMESPACE}/not/real/dir/error.log"
 	"log::log_event - Zero param;113;"
 	"log::log_event - More than one param;113;This is a test event;blah"
 	"log::log_error - Zero param;113;"
@@ -27,8 +27,8 @@ declare -a TST_LOG_ERR=(
 )
  
 declare -a TST_LOG_COR=(
-	"log::log_init - Initializing log with one param;0;${NAMESPACE}tmp/role/error.log"
-	"log::log_init - Initializing log with two params;0;${NAMESPACE}tmp/log/error.log;${NAMESPACE}tmp/log/event.log"
+	"log::log_init - Initializing log with one param;0;${NAMESPACE}/tmp/role/error.log"
+	"log::log_init - Initializing log with two params;0;${NAMESPACE}/tmp/log/error.log;${NAMESPACE}/tmp/log/event.log"
 	"log::log_event - Logging an event;0;This is a test event log entry"
 	"log::log_error - Logging an error;0;This is a test error log entry"
 )
@@ -43,8 +43,8 @@ tst_log_main() {
 
 # Remove any directories or corresponding files created by test_log.sh
 tst_log_clean() {
-	[ -d "${NAMESPACE}tmp/role" ] && rm -rf "${NAMESPACE}tmp/role"
-	[ -d "${NAMESPACE}tmp/log" ] && rm -rf "${NAMESPACE}tmp/log"
+	[ -d "${NAMESPACE}/tmp/role" ] && rm -rf "${NAMESPACE}/tmp/role"
+	[ -d "${NAMESPACE}/tmp/log" ] && rm -rf "${NAMESPACE}/tmp/log"
 }
 
 # Test all conceived possible scenarios which would cause log.sh to react negatively.

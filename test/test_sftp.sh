@@ -9,10 +9,10 @@
 declare TST_SFTP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${TST_SFTP_DIR}/../lib/const.sh"
-source "${NAMESPACE}lib/sftp.sh" 
-source "${NAMESPACE}lib/unittest.sh"
+source "${NAMESPACE}/lib/sftp.sh" 
+source "${NAMESPACE}/lib/unittest.sh"
 
-declare TST_SFTP_TMP="${NAMESPACE}tmp"
+declare TST_SFTP_TMP="${NAMESPACE}/tmp"
 
 declare TST_SFTP_LPRP="${TST_SFTP_TMP}/prp"
 declare TST_SFTP_LSRC="${TST_SFTP_TMP}/src"

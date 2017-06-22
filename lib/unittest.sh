@@ -17,7 +17,7 @@ runMultiInput() {
 	[ ${2} ] && delimiter=${2}
 	local to='/dev/null'
 	[ ${3} ] && { 
-		to="${NAMESPACE}log/${BASH_SOURCE[1]##*/}.unit_test.log"
+		to="${NAMESPACE}/log/${BASH_SOURCE[1]##*/}.unit_test.log"
 		[[ -f ${to} ]] && { truncate -s 0 ${to}; } || { touch ${to}; }
 	}
 	declare -a params
